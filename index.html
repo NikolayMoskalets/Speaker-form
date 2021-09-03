@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speaker-form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <form class="form">
+      <div class="form-field">
+        <label for="user-name">Name</label>
+        <input
+          type="text"
+          name="user-name"
+          id="user-name"
+          placeholder="Name Surname"
+          autofocus
+        />
+      </div>
+      <div class="form-field">
+        <label for="tel">Tel</label>
+        <input type="tel" name="tel" id="tel" placeholder="+30**-000-00-00" />
+      </div>
+      <div class="form-field">
+        <label for="mail">Mail</label>
+        <input type="email" name="mail" id="mail" placeholder="my@mail.com" />
+      </div>
+      <div role="group" class="group">
+        <h2 class="group-title">Theme of report</h2>
+        <ul class="topic-options">
+          <li>
+            <input type="checkbox" name="topic" id="html" />
+            <label for="html">HTML</label>
+          </li>
+          <li>
+            <input type="checkbox" name="topic" id="css" />
+            <label for="css">CSS</label>
+          </li>
+          <li>
+            <input type="checkbox" name="topic" id="js" />
+            <label for="js">JavaScript</label>
+          </li>
+        </ul>
+      </div>
+      <div role="group" class="group">
+        <h2 class="group-title">Your experience level</h2>
+        <ul class="topic-options">
+          <li>
+            <input type="radio" name="level" value="junior" id="junior" />
+            <label for="junior">Junior</label>
+          </li>
+          <li>
+            <input type="radio" name="level" value="middle" id="middle" />
+            <label for="junior">Middle</label>
+          </li>
+          <li>
+            <input type="radio" name="level" value="Senior" id="Senior" />
+            <label for="junior">Senior</label>
+          </li>
+        </ul>
+      </div>
+      <div class="form-field">
+        <label for="date">Date select</label>
+        <input
+          type="datetime-local"
+          name="date"
+          id="date"
+          min="2021-09-01T12:30"
+          max="2021-10-01T12:30"
+          class="date"
+        />
+      </div>
+      <div class="form-field">
+        <label for="pdf">Download the pdf copy of report</label>
+        <input type="file" name="pdf" id="pdf" />
+      </div>
+      <div class="form-field">
+        <label for="comment">Leave comment</label>
+        <textarea name="comment" id="comment" rows="10"></textarea>
+      </div>
+      <div class="agreement">
+        <input type="checkbox" name="agree" id="agree" />
+        <label for="agree">I am agree</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+          });
+      })();
+    </script>
+  </body>
+</html>

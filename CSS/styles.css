@@ -1,0 +1,60 @@
+textarea {
+  resize: none;
+}
+
+.form {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-field input {
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #3a3a3a;
+  font-size: 20px;
+}
+
+.form-field label {
+  margin-bottom: 5px;
+}
+
+.form-field input::placeholder {
+  color: #3a3a3a;
+}
+
+.group-title {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.topic-options {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.topic-options input[type="checkbox"] {
+}
+
+.group {
+  margin-bottom: 20px;
+}
+
+.form .date {
+  border-color: red;
+  font-size: 24px;
+  color: green;
+}
+
+.agreement {
+  margin-bottom: 20px;
+}
